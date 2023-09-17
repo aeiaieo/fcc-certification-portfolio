@@ -1,6 +1,57 @@
+/* delete all border properties with 5px solid gray when finished */
 * {
     margin: 0;
     padding: 0;
     background-color: pink;
-    
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    scroll-behavior:smooth;
+}
+img {
+    width: 360px;
+    height: 200px;
+}
+#navbar {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    border: 5px solid gray;
+}
+ul#nav-list {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+li.nav-item {
+    margin: 20px;
+    list-style: none;
+    font-size: 25px;
+}
+#navbar a {
+    text-decoration: none;
+    color: white;
+}
+#navbar a:hover {
+    color: grey;
+    transition: 0.5s ease-in-out;
+}
+#welcome-section {
+    width: 100vw;
+    height: 100vh;
+    border: 5px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2 {
+    color: white;
+}
+h1 {
+   font-size: 60px; 
+}
+h2 {
+    font-size: 30px;
 }
