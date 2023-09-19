@@ -1,9 +1,10 @@
-/* delete all border properties with 5px solid gray when finished */
+/* delete all border properties with 5px solid gray and adjust asterisk bg color when finished */
 * {
     margin: 0;
     padding: 0;
     background-color: pink;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 html {
     scroll-behavior:smooth;
@@ -17,7 +18,6 @@ img {
     width: 100vw;
     display: flex;
     justify-content: flex-end;
-    border: 5px solid gray;
 }
 ul#nav-list {
     display: flex;
@@ -40,7 +40,6 @@ li.nav-item {
 #welcome-section {
     width: 100vw;
     height: 100vh;
-    border: 5px solid gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +51,7 @@ h1, h2 {
 h1 {
    font-size: 60px; 
 }
-#projects h2 {
+#projects h2, #contact h2 {
     font-size: 30px;
     text-align: center;
     padding-top: 150px;
@@ -63,5 +62,46 @@ h1 {
     height: 75px;
 }
 #flex-container {
-    
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 360px 360px 360px;
+    grid-template-rows: 200px 200px 200px;
+    grid-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+#projects a {
+    text-decoration: none;
+    color: white;
+}
+#projects a:hover {
+/* something needs to happen */
+}
+p {
+    margin-top: 5px;
+}
+#contact {
+    width: 100vw;
+    height: 80vh;
+}
+#contact>ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+#contact>ul>li{
+    font-size: 40px;
+    margin: 20px;
+}
+#contact>ul>li>a{
+    color: white;
+}
+#contact>ul>li>a:hover{
+    color: grey;
+    transition: 0.5s ease-in-out;
+}
+footer {
+    color: white;
+    margin: 20px;
 }
