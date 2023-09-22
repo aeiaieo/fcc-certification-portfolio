@@ -1,23 +1,26 @@
-/* delete all border properties with 5px solid gray and adjust asterisk bg color when finished */
 * {
     margin: 0;
     padding: 0;
-    background-color: pink;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 html {
     scroll-behavior:smooth;
 }
+body {
+    background-color: pink;
+}
 img {
     width: 360px;
-    height: 200px;
+    height: 280px;
+    object-fit: cover; 
 }
 #navbar {
     position: fixed;
     width: 100vw;
     display: flex;
     justify-content: flex-end;
+    background-color: rgb(197, 114, 128);
 }
 ul#nav-list {
     display: flex;
@@ -45,45 +48,62 @@ li.nav-item {
     justify-content: center;
     align-items: center;
 }
-h1, h2 {
-    color: white;
-}
 h1 {
-   font-size: 60px; 
+   font-size: 60px;
+   color: white;
+}
+h2{
+    color: rgb(239, 161, 174);
 }
 #projects h2, #contact h2 {
-    font-size: 30px;
+    font-size: 30px;font-size: 25px;
     text-align: center;
-    padding-top: 150px;
-    border-bottom: 5px solid white;
+    padding-top: 80px;
+    border-bottom: 5px solid grey;
     margin: auto;
     width: 75vw;
     margin-bottom: 75px;
     height: 75px;
 }
-#flex-container {
+#grid-container {
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 360px 360px 360px;
-    grid-template-rows: 200px 200px 200px;
-    grid-gap: 40px;
+    grid-template-rows: 360px 360px;
+    grid-gap: 10px;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+a>p {
+    padding-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
 }
 #projects a {
     text-decoration: none;
     color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
-#projects a:hover {
-/* something needs to happen */
+#show{
+    display: none;
 }
-p {
-    margin-top: 5px;
+#projects a:hover #show{
+    display: block;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+#projects a:hover #hide{
+    display: none;
 }
 #contact {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
 }
 #contact>ul{
     display: flex;
@@ -104,4 +124,16 @@ p {
 footer {
     color: white;
     margin: 20px;
+}
+@media screen and (max-width: 1000px) {
+    #grid-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: fit-content;
+      padding-bottom: 5px;
+    }
+    #navbar {
+        justify-content: center;
+  }
 }
